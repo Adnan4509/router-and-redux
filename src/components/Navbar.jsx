@@ -1,16 +1,16 @@
-
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
 
     return(
         <div>
-            <nav>       {/* when using this anchor tag the page is loaded whenever a link is clicked */}
-                <a href="/"><li>Home</li></a>
-                <a href="/about"><li>About Us</li></a>
-                <a href="/contact"><li>Contact Us</li></a>
+            <nav>              
+                <Link to="/"><li>Home</li></Link>
+                <Link to="/about"><li>About Us</li></Link>
+                <Link to="/contact"><li>Contact Us</li></Link>
             </nav>
         </div>
-    )
+    )       // Link tag allows us to change pages without page reload 
 }
 
 export default Navbar

@@ -12,19 +12,19 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home/>
+      element: <><Navbar/><Home/></>    //this is structuring if we ignore this the destructure error occurs
     },{
       path: "/about",
-      element: <About/>
+      element: <><Navbar/><About/></>
     },{
       path: "/contact",
-      element: <Contact/>
+      element: <><Navbar/><Contact/></>
     }
   ])
 
   return (
     <>
-      <Navbar/>
+      
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
