@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Navbar = () => {
 
     return(
         <div>
             <nav>              
-                <Link to="/"><li>Home</li></Link>
-                <Link to="/about"><li>About Us</li></Link>
-                <Link to="/contact"><li>Contact Us</li></Link>
+                <NavLink className={(e) => {return e.isActive?"red":""}} to="/"><li>Home</li></NavLink>
+                <NavLink className={(e) => {return e.isActive?"red":""}} to="/about"><li>About Us</li></NavLink>
+                <NavLink className={(e) => {return e.isActive?"red":""}} to="/contact"><li>Contact Us</li></NavLink>
             </nav>
         </div>
-    )       // Link tag allows us to change pages without page reload 
+    )       // NavLink tag allows us to change pages without page reload
+            // And can also track active link 
 }
 
 export default Navbar
